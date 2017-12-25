@@ -14,8 +14,6 @@
 Route::get('/', function () {
     $taskModel = new App\Task();
     $tasks = $taskModel->paginate(4);
-    
-
     return View::make('crud')->with('tasks',$tasks);
 });
 
